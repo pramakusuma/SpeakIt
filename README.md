@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/alexanderritik/Best-README-Template">
-    <img src="speakit_logo.png" alt="Logo" width="80" height="80">
+    <img src="Aseets/speakit_logo.png" alt="Logo" width="80" height="80">
   </a>
   <p align="center">
     SpeakIt is an iOS application that provides English-speaking learning with its features that can recognize the user's voice and convert it to text to learn how to speak English words and sentences. It also provides the accuracy of each speech recognition. This app was built on behalf of the final thesis project for the undergraduate bachelor.
