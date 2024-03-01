@@ -16,11 +16,10 @@
 
 ## Features
 
-- [x] Feature 1
-- [x] Feature 2
-- [x] Feature 3
-- [x] Feature 4
-- [x] Feature 5
+- Progress tracker
+- Play word/sentence example
+- Speech recognition
+- Speech accuracy
 
 ## Requirements
 
@@ -40,6 +39,6 @@ import Speech
 github "pramakusuma/speakit"
 ```
 #### Manually
-1. Download and drop ```SpeakIt.xcodeprj``` in Xcode.  
+1. Download and drop ```SpeakIt.xcodeproj``` in Xcode.  
 2. Run the app  
 
