@@ -9,11 +9,11 @@
   </p>
 </p>
 
-<p align="row">
-<img src= "Assets/homescreen.PNG" width="100" >
-<img src= "Assets/lessondetail.PNG" width="100" >
-  <img src= "Assets/topicdetail.PNG" width="100" >
-  <img src= "Assets/topicfinished.PNG" width="100" >
+<p align="center">
+<img src= "Assets/homescreen.PNG" width="200" >
+<img src= "Assets/lessondetail.PNG" width="200" >
+  <img src= "Assets/topicdetail.PNG" width="200" >
+  <img src= "Assets/topicfinished.PNG" width="200" >
 </p>
 
 ## Features
