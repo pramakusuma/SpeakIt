@@ -10,10 +10,10 @@
 </p>
 
 <p align="row">
-<img src= "Assets/homescreen.PNG" width="400" >
-<img src= "Assets/lessondetail.PNG" width="400" >
-  <img src= "Assets/topicdetail.PNG" width="400" >
-  <img src= "Assets/topicfinished.PNG" width="400" >
+<img src= "Assets/homescreen.PNG" width="100" >
+<img src= "Assets/lessondetail.PNG" width="100" >
+  <img src= "Assets/topicdetail.PNG" width="100" >
+  <img src= "Assets/topicfinished.PNG" width="100" >
 </p>
 
 ## Features
