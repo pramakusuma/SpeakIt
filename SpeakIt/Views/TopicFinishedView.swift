@@ -17,11 +17,6 @@ class TopicFinishedView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        var player: AVAudioPlayer!
-//        let url = Bundle.main.url(forResource: "completed", withExtension: "mp3")
-//                player = try! AVAudioPlayer(contentsOf: url!)
-//                player.play()
         getTopicDetail(topicId: topicId)
     }
     

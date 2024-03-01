@@ -16,10 +16,8 @@ class StartedScreenView : UIViewController {
     @IBAction func startButton(_ sender: UIButton) {
         
         if userController.isUserLoggedIn() {
-//            self.createSpinnerView()
             goToHome()
         } else {
-//            self.createSpinnerView()
             goToLogin()
         }
     }

@@ -14,7 +14,6 @@ class HomeView : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak private var lessonTableView: UITableView!
     
-//    private var progress = 0.3
     
     private let lessonController = LessonController()
     private let userController = UserController()
@@ -25,18 +24,10 @@ class HomeView : UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getAllLesson()
-//        getCurrentProgress()
         lessonTableView.backgroundColor = UIColor.clear
         progressBar.transform.scaledBy(x: 1, y: 5)
         progressBar.layer.cornerRadius = 10
         
-    
-        
-        
-        //Tabel View
-//        lessonTableView.register(LessonTableViewCell.self, forCellReuseIdentifier: "LessonTableViewCell")
-//        self.lessonTableView.register(UINib(nibName: "LessonTableViewCell", bundle: nil), forCellReuseIdentifier: "LessonTableViewCell")
-
         print("lesson data self: \(String(describing: self.lessonData))")
         
         
@@ -113,7 +104,6 @@ class HomeView : UIViewController, UITableViewDataSource, UITableViewDelegate {
             cell.lessonTopicCountLabel.text = "\(String(describing: self.lessonData![indexPath.row].topicCount)) topics"
             //lesson image view
             let imageURL = URL(string: self.lessonData![indexPath.row].imageURL)
-//            let data = try? Data(contentsOf: imageURL!)
             URLSession.shared.dataTask(with: imageURL!) { (data, respose, error) in
                 guard let imageData = data else { return }
                 DispatchQueue.main.async {

@@ -12,10 +12,6 @@ import FirebaseAuth
 
 class UserController {
 
-//    static let shared = UserController()
-//    private init() {
-//    }
-    
     var ref: DocumentReference? = nil
     let db = Firestore.firestore()
     
@@ -24,17 +20,13 @@ class UserController {
     }
     
     func login(email: String, password: String, Completion:@escaping (String) -> ()) {
-//        var response = ""
         Auth.auth().signIn(withEmail: email, password: password) { user, error in
             if user != nil {
-//                response = "Success"
                 Completion("Success")
             } else {
-//                response = "Error"
                 Completion("Error")
             }
         }
-//        Completion(response)
     }
     
     func register(email: String, username: String, password: String, Completion:@escaping (String) -> ()) {
@@ -64,10 +56,8 @@ class UserController {
                         print("Email verification sent")
                     }
                 }
-//                response = "Success"
                 Completion("Success")
             } else  {
-//                response = "Error"
                 Completion("Error")
             }
         }

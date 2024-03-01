@@ -32,7 +32,6 @@ class LessonController {
                     lessonData.append(newLesson)
                     Completion(lessonData)
                     print("lesson data db: \(lessonData)")
-//                    print("\(document.documentID) => \(document.data())")
                 }
             }
         }
@@ -67,7 +66,6 @@ class LessonController {
     }
     
     func getLessonDetail(lessonId: String, Completion:@escaping (LessonModel) -> ()) {
-//        var lessonData = LessonModel()
         self.db.collection("LessonModel").getDocuments() { querySnapshot, error in
             if error != nil {
                 print("Error getting document: \(String(describing: error))")
@@ -81,7 +79,6 @@ class LessonController {
                         let imageURL = data["imageURL"] as? String ?? ""
                         let topicCount = data["topicCount"] as? Int ?? 0
                         let newLesson = LessonModel(id: id, name: name, topicCount: topicCount, imageURL: imageURL)
-//                        lessonData = newLesson
                         Completion(newLesson)
                     }
                 }

@@ -56,7 +56,6 @@ class TopicDetailView : UIViewController {
         speechController.requestPermission()
         getAllPronounciation(topicId: self.topicId)
         getTopicDetail(topicId: self.topicId)
-//        showPronounciation()
         
         self.guideLabel.text = "Click to begin"
     }
@@ -92,62 +91,25 @@ class TopicDetailView : UIViewController {
             speechController.playSentence(sentence: speechReference!)
         }
         
-//        playSentence(sentence: "Hello World")
     }
     
     
     @IBAction func startSpeechButton(_ sender: UIButton) {
         
-        //Pulse Animation
-//        let pulseAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
-//        pulseAnimation.duration = 1
-//        pulseAnimation.fromValue = 0
-//        pulseAnimation.toValue = 1
-//        pulseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-//        pulseAnimation.autoreverses = true
-//        pulseAnimation.repeatCount = .greatestFiniteMagnitude
-//        self.startSpeechButton.layer.add(pulseAnimation, forKey: "animateOpacity")
-        
         let pulseEffect = LFTPulseAnimation(repeatCount: Float.infinity, radius:50, position:self.startSpeechButton.center)
         pulseEffect.name = "pulseEffect"
-//        print("Sublayer: \(String(describing: view.layer.sublayers))")
         view.layer.insertSublayer(pulseEffect, below: self.startSpeechButton.layer)
         
         self.isStart = !self.isStart
-//        var player: AVAudioPlayer!
         
         if self.isStart {
-            
-            //Audio micOn Played
-//            let audioSession = AVAudioSession.sharedInstance()
-//            do {
-//                try audioSession.setCategory(.playback, mode: .moviePlayback)
-//                try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-//            } catch let error as NSError {
-//                print("Error : ", error.localizedDescription)
-//            }
-//            
-//            guard let url = Bundle.main.path(forResource: "micOn", ofType: "mp3") else { return }
-//            do {
-//                player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: url))
-//                player.play()
-//                print("micOn played")
-//            } catch let error {
-//                print("micOn error : \(error.localizedDescription)")
-//            }
-            
             startSpeechRecognition()
         } else {
-//            let noPulseEffect = LFTPulseAnimation(repeatCount: 0, radius:0, position:self.startSpeechButton.center)
-//            view.layer.insertSublayer(noPulseEffect, below: self.startSpeechButton.layer)
             view.layer.sublayers?.forEach {
                 if $0 is LFTPulseAnimation {
                     $0.removeFromSuperlayer()
                 }
             }
-//            let url = Bundle.main.path(forResource: "micOff", ofType: "mp3")
-//            player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: url!))
-//            player.play()
             cancelSpeechRecognition()
         }
         

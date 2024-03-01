@@ -14,9 +14,6 @@ class SpinnerView: UIViewController {
     override func loadView() {
         view = UIView()
         view.backgroundColor = UIColor.clear
-//        view.frame.size.width = 80
-//        view.frame.size.height = 80
-        
         frame.translatesAutoresizingMaskIntoConstraints = false
         frame.backgroundColor = UIColor.white
         view.addSubview(frame)

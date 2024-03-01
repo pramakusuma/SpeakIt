@@ -16,8 +16,7 @@ class TopicTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
+
         topicCardView.layer.cornerRadius = 15
         topicCardView.layer.shadowColor = UIColor.black.cgColor
         topicCardView.layer.shadowOpacity = 0.25
@@ -28,7 +27,6 @@ class TopicTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

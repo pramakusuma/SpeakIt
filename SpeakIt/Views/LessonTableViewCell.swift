@@ -23,16 +23,10 @@ class LessonTableViewCell: UITableViewCell {
         lessonCardView.layer.shadowOpacity = 0.25
         lessonCardView.layer.shadowOffset.height = 4
         lessonCardView.layer.shadowRadius = 7.5
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-//        if selected == true {
-//            lessonCardView.backgroundColor = UIColor.lightGray
-//        }
-        
-        // Configure the view for the selected state
     }
     
     

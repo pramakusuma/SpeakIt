@@ -12,7 +12,6 @@ import Speech
 
 class SpeechController: NSObject, ObservableObject, SFSpeechRecognizerDelegate, AVSpeechSynthesizerDelegate {
     let audioEngine = AVAudioEngine()
-//    let audioSession = AVAudioSession()
     let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
     var request: SFSpeechAudioBufferRecognitionRequest?
     var task: SFSpeechRecognitionTask?
@@ -76,14 +75,6 @@ class SpeechController: NSObject, ObservableObject, SFSpeechRecognizerDelegate, 
             fatalError("Unable to created a SFSpeechAudioBufferRecognitionRequest object")
         }
         request.shouldReportPartialResults = true
-        
-        //Versioning IOS
-//        if #available(iOS 13, *) {
-//            request.requiresOnDeviceRecognition = true
-//            if #available(iOS 17, *) {
-//                request.customizedLanguageModel = self.lmConfiguration
-//            }
-//        }
         
         //Check Availability
         guard let recognization = SFSpeechRecognizer() else {
@@ -173,8 +164,6 @@ class SpeechController: NSObject, ObservableObject, SFSpeechRecognizerDelegate, 
     }
     
     func calculateSpeechAccuracy(hyphotesis: String, reference: String) -> Int {
-//        let reference = "I am now going to bed"
-//        let hyphotesis = "I am going to bed"
         
         //Split sentence into array
         var hyphotesisArr = hyphotesis.lowercased().components(separatedBy: [".", ",", "?", "!"]).joined(separator: "").components(separatedBy: " ")

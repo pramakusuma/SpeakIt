@@ -118,7 +118,6 @@ class TopicView : UIViewController, UITableViewDataSource, UITableViewDelegate {
             print("topic data get id: \(lessonId)")
             
         }
-//            self.showTableViewCells()
             
         print("dispatched")
         
@@ -139,7 +138,6 @@ class TopicView : UIViewController, UITableViewDataSource, UITableViewDelegate {
         } else {
             return 0
         }
-//        return topicData?.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -174,7 +172,6 @@ class TopicView : UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         self.topicIdClicked = filteredTopic![indexPath.row].id
         goToTopicDetail()
-//        goToTopic(lessonId: lessonId)
     }
     
     func showTableViewCells() {

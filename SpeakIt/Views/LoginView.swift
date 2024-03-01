@@ -21,12 +21,7 @@ class LoginView : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-//        if isUserLoggedIn() {
-//           goToHome()
-//        } else {
-//            
-//        }
-        
+
         //Text Field Editing
         emailTextField.layer.borderWidth = 1
         emailTextField.layer.cornerRadius = 10
