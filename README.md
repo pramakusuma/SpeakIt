@@ -1,7 +1,6 @@
 # SpeakIt
 <br />
 <p align="center">
-  <a href="https://github.com/alexanderritik/Best-README-Template">
     <img src="speakit_logo.png" alt="Logo" width="80" height="80">
   </a>
     <img src="Assets/speakit_logo.png" alt="Logo" width="80" height="80">
